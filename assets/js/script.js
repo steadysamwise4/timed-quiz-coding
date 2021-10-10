@@ -1,4 +1,4 @@
-var time = 60;
+/*var time = 60;
 var questionsContainerEl = document.querySelector(".questions-container");
 
 // function for instructions and start quiz button to be visible when page loads
@@ -16,3 +16,5 @@ var pageLoad = function () {
     questionsContainerEl.appendChild(startButtonEl);
 };
 pageLoad();
+*/
+

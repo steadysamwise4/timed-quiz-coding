@@ -3,7 +3,8 @@ var questionsArr = [{
     answer1: "Values",
     answer2: "Names",
     answer3: "Properties",
-    answer4: "All of the Above"
+    answer4: "All of the Above",
+    correct: 3
 }, {
     content: "What stores data value and can be changed later on?",
     answer1: 'node',
