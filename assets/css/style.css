@@ -50,18 +50,26 @@ body {
 
 .intro {
     text-align: center;
-    color:black;
+    color: var(--tertiary);
     margin: 10%;
+    font-size: 1.5rem;
 }
 
 .questions-container {
     display: flex;
     flex-direction: column;
+    background-color: var(--grey);
+   
+}
+.button-link {
+    text-decoration: none;
+    display: flex;
+    text-align: center;
 }
 .start {
     outline: none;
     border: none;
-    display: inline-block;
+    display: flex;
     padding: 10px 15px;
     background: var(--primary);
     font-size: 2.0rem;
@@ -70,9 +78,9 @@ body {
     top: -3px;
     box-shadow: 0 3px var(--grey);
     color:black;
-
+    justify-content: center;
     padding: 5px 7px;
-    margin: 2% 37%;
+    margin: auto;
     background: var(--secondary);
     color: #fff;
     
@@ -87,7 +95,7 @@ body {
     top: 0;
   }
 
-  .btn {
+.btn {
     outline: none;
     border: none;
     display: inline-block;
@@ -106,8 +114,50 @@ body {
     color: #fff;
   }
 
-  .scores {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
+.scores {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+.user-info {
+    display: flex;
+    flex-direction: column;
+
+}
+.score {
+    color:black;
+    font-size: 4.0rem;
+    text-align: center;
+  }
+.progress-text {
+    color: var(--grey);
+    font-size: 3.0rem;
+    text-align: center;
+}
+.bold-question {
+    font-size: 2.5rem;
+    text-align: center;
+}
+.answer-list {
+    display:flex;
+    flex-direction: column;
+    list-style-type: none;
+
+}
+.choice {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 4px 35%;
+    color:black;
+    background-color: var(--tertiary);
+    border-radius: 12px;
+    border:solid 1px var(--secondary);
+}
+.choice:hover {
+    box-shadow: 0 2px var(--secondary);
+    top: -2px;
+  }
+.choice:active {
+    box-shadow: 0 0px var(--secondary);
+    top: 0;
   }

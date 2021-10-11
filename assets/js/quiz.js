@@ -134,7 +134,7 @@ answersListEl.forEach(choice => {
         setTimeout (()=> {
             selectedChoice.parentElement.classList.remove(classToApply)
             changeQuestion()
-        }, 1000)
+        }, 500)
     })
 })
 
