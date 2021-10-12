@@ -98,7 +98,7 @@ playGame = () => {
 changeQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
-        return window.location.assign('/end.html')
+        return window.location.assign("file:///C:/Users/Sam%20and%20Maggie/Desktop/Classwork/weekly-challenges/timed-quiz-coding/end.html")
     }
     questionCounter++
     progressText.innerText = "Question " + questionCounter + " of " + MAX_QUESTIONS

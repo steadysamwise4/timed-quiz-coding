@@ -161,3 +161,8 @@ body {
     box-shadow: 0 0px var(--secondary);
     top: 0;
   }
+
+  .initials {
+      width: 75px;
+      margin: 0 auto;
+  }
