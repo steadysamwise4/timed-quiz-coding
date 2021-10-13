@@ -3,6 +3,7 @@ const answersListEl = Array.from(document.querySelectorAll('.choice'))
 const responseEl = document.querySelector('.response')
 const progressText = document.querySelector('.progress-text')
 const scoreText = document.querySelector('.score')
+const timerEl = document.querySelector(".time")
 
 let questionsArr = [{
     question: "An object is an unordered list of________.",
@@ -79,13 +80,40 @@ let questionsArr = [{
 
 ];
 
+// timer section
+// Timer that counts down from 30
+function countdown() {
+    var timeLeft = 30;
+  
+    // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
+    var timeInterval = setInterval(function () {
+      // As long as the `timeLeft` is greater than 1
+      if (timeLeft > 1) {
+        // Set the `textContent` of `timerEl` to show the remaining seconds
+        timerEl.textContent = 'Time: ' + timeLeft ;
+        // Decrement `timeLeft` by 1
+        timeLeft--;
+      } 
+       else {
+        // Once `timeLeft` gets to 0, set `timerEl` to an empty string
+        timerEl.textContent = 'Out of Time!';
+        // Use `clearInterval()` to stop the timer
+        clearInterval(timeInterval);
+        localStorage.setItem('mostRecentScore', score)
+        return window.location.assign("file:///C:/Users/Sam%20and%20Maggie/Desktop/Classwork/weekly-challenges/timed-quiz-coding/end.html")
+      }
+    }, 1000);
+  }
+    
+    
+
 let currentQuestion = {}
 let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
-const SCORE_POINTS = 5
+const SCORE_POINTS = 10
 const MAX_QUESTIONS = 10
 
 playGame = () => {
@@ -140,7 +168,7 @@ answersListEl.forEach(choice => {
 
 incrementScore = num => {
     score += num
-    scoreText.innerText = score
+    scoreText.innerText = "Score: " + score
 }
-
+countdown()
 playGame()

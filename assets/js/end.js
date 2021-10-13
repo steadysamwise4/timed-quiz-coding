@@ -1,7 +1,7 @@
 var recentScore = localStorage.getItem("mostRecentScore")
 console.log(recentScore)
 var scoreEl = document.querySelector(".score")
-scoreEl.textContent = recentScore;
+scoreEl.textContent = "Score: " + recentScore;
 var highScoresArr = JSON.parse(localStorage.getItem("highScoresArr")) || [];
 var saveButtonEl = document.querySelector(".save-button")
 saveButtonEl.addEventListener("click", function() {
