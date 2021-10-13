@@ -79,11 +79,11 @@ let questionsArr = [{
     
 
 ];
-
+let timeLeft = 60;
 // timer section
 // Timer that counts down from 30
 function countdown() {
-    var timeLeft = 30;
+    //var timeLeft = 30;
   
     // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
     var timeInterval = setInterval(function () {
@@ -115,7 +115,7 @@ let availableQuestions = []
 
 const SCORE_POINTS = 10
 const MAX_QUESTIONS = 10
-
+const TIME_PENALTY = 2
 playGame = () => {
     questionCounter = 0
     score = 0
@@ -125,7 +125,7 @@ playGame = () => {
 
 changeQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score)
+        localStorage.setItem('mostRecentScore', score + timeLeft)
         return window.location.assign("file:///C:/Users/Sam%20and%20Maggie/Desktop/Classwork/weekly-challenges/timed-quiz-coding/end.html")
     }
     questionCounter++
@@ -156,6 +156,9 @@ answersListEl.forEach(choice => {
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
         if(classToApply === "correct") {
             incrementScore(SCORE_POINTS)
+        } else if(classToApply === "incorrect") {
+            decrementTime(TIME_PENALTY)
+
         }
         selectedChoice.parentElement.classList.add(classToApply)
 
@@ -165,6 +168,11 @@ answersListEl.forEach(choice => {
         }, 500)
     })
 })
+
+decrementTime = num => {
+    timeLeft -= num
+    timerEl.innerText = "Time: " + timeLeft
+}
 
 incrementScore = num => {
     score += num
