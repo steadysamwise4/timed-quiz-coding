@@ -6,7 +6,8 @@ console.log(highScores)
 var olEl = document.querySelector(".score-list");
 highScores.forEach(score => {
    var li = document.createElement("li");
-   li.textContent = score.initials + " " + score.recentScore;
+   li.className="leaderboard-item"
+   li.textContent = score.initials + " : " + score.recentScore;
    
    olEl.appendChild(li);
 });
