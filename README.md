@@ -7,6 +7,6 @@ This project was a challenge, but it went more smoothly than the previous one. I
 ## Links
 Below is a link to the deployed page and a screenshot of how it looks in a browser.
 
-
+https://steadysamwise4.github.io/timed-quiz-coding
 
 ![timed-quiz-coding](./assets/images/quizhome.png)
