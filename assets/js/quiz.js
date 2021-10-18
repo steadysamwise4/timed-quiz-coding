@@ -101,7 +101,7 @@ function countdown() {
         // Use `clearInterval()` to stop the timer
         clearInterval(timeInterval);
         localStorage.setItem('mostRecentScore', score)
-        return window.location.assign("file:///C:/Users/Sam%20and%20Maggie/Desktop/Classwork/weekly-challenges/timed-quiz-coding/end.html")
+        return window.location.assign("https://steadysamwise4.github.io/timed-quiz-coding/end.html")
       }
     }, 1000);
   }
@@ -127,7 +127,7 @@ playGame = () => {
 changeQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score + timeLeft)
-        return window.location.assign("file:///C:/Users/Sam%20and%20Maggie/Desktop/Classwork/weekly-challenges/timed-quiz-coding/end.html")
+        return window.location.assign("https://steadysamwise4.github.io/timed-quiz-coding/end.html")
     }
     questionCounter++
     progressText.innerText = "Question " + questionCounter + " of " + MAX_QUESTIONS

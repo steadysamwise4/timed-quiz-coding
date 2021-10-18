@@ -19,5 +19,5 @@ if (highScoresArr.length >= 50) {
 }
 localStorage.setItem("highScoresArr", JSON.stringify(highScoresArr))
 
-return window.location.assign("file:///C:/Users/Sam%20and%20Maggie/Desktop/Classwork/weekly-challenges/timed-quiz-coding/highScores.html")
+return window.location.assign("https://steadysamwise4.github.io/timed-quiz-coding/highScores.html")
 })
