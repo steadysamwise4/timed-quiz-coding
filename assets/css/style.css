@@ -164,26 +164,39 @@ body {
     display:flex;
     flex-direction: column;
     list-style-type: none;
+    justify-content: center;
 
-}
+  }
+  .choice-container {
+    display:flex;
+    justify-content: center;
+  }
 .choice {
     text-align: center;
     font-size: 1.8rem;
-    margin: 4px 35%;
+    margin: 4px auto;
     color:black;
     background-color: var(--tertiary);
     border-radius: 12px;
     border:solid 1px var(--secondary);
+    width: 300px;
 }
 .choice:hover {
     box-shadow: 0 2px var(--secondary);
     top: -2px;
+    transform: scale(1.02);
+    transition: 100ms;
   }
 .choice:active {
     box-shadow: 0 0px var(--secondary);
     top: 0;
   }
-
+.correct {
+  background-color: green;
+}
+.incorrect {
+  background-color: red;
+}
   .initials {
     outline: none;
     border: none;
@@ -227,7 +240,8 @@ body {
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
-      margin: 10px;
+      margin: 0;
+      background-color: var(--grey);
   }
   .link-buttons a {
       text-decoration: none;

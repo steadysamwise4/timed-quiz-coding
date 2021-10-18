@@ -5,6 +5,7 @@ const progressText = document.querySelector('.progress-text')
 const scoreText = document.querySelector('.score')
 const timerEl = document.querySelector(".time")
 
+// array of questions
 let questionsArr = [{
     question: "An object is an unordered list of________.",
     choice1: "Values",
